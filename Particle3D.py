@@ -173,7 +173,7 @@ class Projectile(Particle):
         mod_v = np.sqrt(np.sum(v**2))
          
          
-        Drag = -self.Cd*v_hat*mod_v*v
+        Drag = -self.Cd*v_hat*mod_v*v  # something is wrong here apparently
         G = np.array([0,0,-self.m*g])
 
         return G+Drag
